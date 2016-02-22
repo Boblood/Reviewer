@@ -14,6 +14,7 @@ namespace Reviewer.Models
         private string _name;
         private string _publisher;
         private DateTime _releaseData;
+        private GameSystem _gameConsole;        
         private string _desc;
         private string _reason;
 
@@ -43,6 +44,12 @@ namespace Reviewer.Models
         {
             get { return _releaseData; }
             set { _releaseData = value; }
+        }
+
+        public GameSystem GameConsole
+        {
+            get { return _gameConsole; }
+            set { _gameConsole = value; }
         }
 
         public string ReasonForGreatness

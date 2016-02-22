@@ -160,6 +160,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Data\GRDB_D1.cs" />
     <Compile Include="Models\Game.cs" />
     <Compile Include="Models\GameSystem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
