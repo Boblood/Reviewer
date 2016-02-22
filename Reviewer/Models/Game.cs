@@ -8,6 +8,8 @@ namespace Reviewer.Models
 {
     public class Game
     {
+        #region Fields
+
         private int _id;
         private string _name;
         private string _publisher;
@@ -15,30 +17,9 @@ namespace Reviewer.Models
         private string _desc;
         private string _reason;
 
-        public string Description
-        {
-            get { return _desc; }
-            set { _desc = value; }
-        }
+        #endregion
 
-        public string ReasonForGreatness
-        {
-            get { return _reason; }
-            set { _reason = value; }
-        }
-
-        public DateTime ReleaseDate
-        {
-            get { return _releaseData; }
-            set { _releaseData = value; }
-        }
-
-        public string Publisher
-        {
-            get { return _publisher; }
-            set { _publisher = value; }
-        }
-
+        #region Properties
 
         public int ID
         {
@@ -52,6 +33,30 @@ namespace Reviewer.Models
             set { _name = value; }
         }
 
+        public string Publisher
+        {
+            get { return _publisher; }
+            set { _publisher = value; }
+        }
 
+        public DateTime ReleaseDate
+        {
+            get { return _releaseData; }
+            set { _releaseData = value; }
+        }
+
+        public string ReasonForGreatness
+        {
+            get { return _reason; }
+            set { _reason = value; }
+        }
+
+        public string Description
+        {
+            get { return _desc; }
+            set { _desc = value; }
+        }
+
+        #endregion
     }
 }
