@@ -10,6 +10,12 @@ namespace Reviewer
 {
     public class GRDB_D1 : DbContext
     {
+        public GRDB_D1() : base()
+        {
+
+        }
+
         public DbSet<Game> Games { get; set; }
+        public DbSet<GameGameSystemLink> GameGameSystemLinks { get; set; }
     }
 }

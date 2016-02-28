@@ -8,13 +8,19 @@ namespace Reviewer.Models
 {
     public class Game
     {
+
+        public Game()
+        {
+            GameConsoles = new List<GameSystem>();
+        }
+
         #region Fields
 
         private int _id;
         private string _name;
         private string _publisher;
         private DateTime _releaseData;
-        private IEnumerable<GameSystem> _gameConsoles;
+        private ICollection<GameSystem> _gameConsoles;
         private string _desc;
         private string _reason;
 
@@ -46,7 +52,7 @@ namespace Reviewer.Models
             set { _releaseData = value; }
         }
 
-        public IEnumerable<GameSystem> GameConsoles
+        public virtual ICollection<GameSystem> GameConsoles
         {
             get { return _gameConsoles; }
             set { _gameConsoles = value; }
@@ -65,5 +71,6 @@ namespace Reviewer.Models
         }
 
         #endregion
+
     }
 }

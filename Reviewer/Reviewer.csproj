@@ -164,6 +164,7 @@
     <Compile Include="Data\GRDB_D1.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Game.cs" />
+    <Compile Include="Models\GameGameSystemLink.cs" />
     <Compile Include="Models\GameSystem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

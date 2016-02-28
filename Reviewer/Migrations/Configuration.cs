@@ -48,6 +48,32 @@ namespace Reviewer.Migrations
                     Description = "The first Console Halo",
                     ReasonForGreatness = "OG status and impact on Game community"
                 });
+
+            context.GameGameSystemLinks.AddOrUpdate(x => x.ID,
+                new GameGameSystemLink
+                {
+                    ID = 1,
+                    GameID = 1,
+                    CurrentGameSystem = GameSystem.NES
+                },
+                new GameGameSystemLink
+                {
+                    ID = 2,
+                    GameID = 2,
+                    CurrentGameSystem = GameSystem.NES
+                },
+                new GameGameSystemLink
+                {
+                    ID = 3,
+                    GameID = 3,
+                    CurrentGameSystem = GameSystem.Xbox
+                }, 
+                new GameGameSystemLink
+                {
+                    ID = 4,
+                    GameID = 3,
+                    CurrentGameSystem = GameSystem.Xbox360
+                });
         }
     }
 }
