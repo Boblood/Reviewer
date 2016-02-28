@@ -14,7 +14,7 @@ namespace Reviewer.Models
         private string _name;
         private string _publisher;
         private DateTime _releaseData;
-        private GameSystem _gameConsole;        
+        private IEnumerable<GameSystem> _gameConsoles;
         private string _desc;
         private string _reason;
 
@@ -46,10 +46,10 @@ namespace Reviewer.Models
             set { _releaseData = value; }
         }
 
-        public GameSystem GameConsole
+        public IEnumerable<GameSystem> GameConsoles
         {
-            get { return _gameConsole; }
-            set { _gameConsole = value; }
+            get { return _gameConsoles; }
+            set { _gameConsoles = value; }
         }
 
         public string ReasonForGreatness
