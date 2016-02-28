@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -52,6 +53,9 @@ namespace Reviewer.Models
             set { _releaseData = value; }
         }
 
+        public int RefID { get; set; }
+
+        [ForeignKey("RefID")]
         public virtual ICollection<GameSystem> GameConsoles
         {
             get { return _gameConsoles; }
