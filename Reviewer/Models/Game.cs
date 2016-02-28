@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
@@ -12,7 +13,7 @@ namespace Reviewer.Models
 
         public Game()
         {
-            GameConsoles = new List<GameSystem>();
+            GameConsoles = new List<GameGameSystemLink>();
         }
 
         #region Fields
@@ -21,7 +22,7 @@ namespace Reviewer.Models
         private string _name;
         private string _publisher;
         private DateTime _releaseData;
-        private ICollection<GameSystem> _gameConsoles;
+        private ICollection<GameGameSystemLink> _gameConsoles;
         private string _desc;
         private string _reason;
 
@@ -29,7 +30,8 @@ namespace Reviewer.Models
 
         #region Properties
 
-        public int ID
+        [Key]
+        public int GameID
         {
             get { return _id; }
             set { _id = value; }
@@ -52,11 +54,8 @@ namespace Reviewer.Models
             get { return _releaseData; }
             set { _releaseData = value; }
         }
-
-        public int RefID { get; set; }
-
-        [ForeignKey("RefID")]
-        public virtual ICollection<GameSystem> GameConsoles
+        
+        public virtual ICollection<GameGameSystemLink> GameConsoles
         {
             get { return _gameConsoles; }
             set { _gameConsoles = value; }
