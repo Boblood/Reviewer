@@ -22,11 +22,12 @@ namespace Reviewer.Models
         }
 
         [ForeignKey("RefID")]
-        public Game GameID
+        public virtual Game GameID
         {
             get { return _gameid; }
             set { _gameid = value; }
         }
+
         public GameSystem CurrentGameSystem
         {
             get { return _currentGameSystem; }

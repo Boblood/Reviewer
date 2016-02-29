@@ -53,25 +53,30 @@ namespace Reviewer.Migrations
                 {
                     ID = 1,
                     GameID = (Game)context.Games.Where(x => x.GameID == 1),
+                    //GameID = 1,
                     CurrentGameSystem = GameSystem.NES
                 },
                 new GameGameSystemLink
                 {
                     ID = 2,
                     GameID = (Game)context.Games.Where(x => x.GameID == 2),
+                    //GameID = 2,
                     CurrentGameSystem = GameSystem.NES
                 },
                 new GameGameSystemLink
                 {
                     ID = 3,
                     GameID = (Game)context.Games.Where(x => x.GameID == 3),
+                    //GameID = 3,
                     CurrentGameSystem = GameSystem.Xbox
                 },
                 new GameGameSystemLink
                 {
                     ID = 4,
                     GameID = (Game)context.Games.Where(x => x.GameID == 3),
+                    //GameID = 3,
                     CurrentGameSystem = GameSystem.Xbox360
                 });
         }
     }
+}
